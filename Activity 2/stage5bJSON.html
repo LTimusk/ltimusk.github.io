@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Stage 5c JSON Activity</title>
+
+    <style>
+        div {
+            height: 50px; 
+            width: 0px;
+            border-radius: 10px;
+            background-color:red;
+        }
+        h1 {
+            margin: auto;
+            line-height: 50px;
+            display: table;
+        }
+        p {
+            margin-left: 10px;
+            font-size: 20px;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+                
+    </style>
+</head>
+<body>
+
+<h1>HIV Infection Rates Compared Proportionally By Country</h1>
+
+
+<div id = "content">
+
+</div>
+
+
+
+<script>
+    var myData = "";
+    var staticUrl = 'https://raw.githubusercontent.com/PMiskew/pmiskew.github.io/master/Activity%202/data/HIVinfection.json'; 
+    $.getJSON(staticUrl, function(data) {
+        iw = window.innerWidth - 100;
+        //console.log(iw);
+        //Whenever finding hte largest or smallest value in a list always
+        //set the values to a number in the list to start. 
+        
+        //DATA MANIPULATION 
+        countryData = data.fact[1].Value;
+        loc = countryData.indexOf("[");
+        val = countryData.substring(0,loc);
+        val = val.replace(/ /g,"");
+        val = parseInt(val);
+        largest = val;
+        console.log(largest)
+        len = data.fact.length;
+        for (i = 0; i < len; i = i + 1) {
+            countryData = data.fact[i].Value;
+            //console.log(countryData);
+            loc = countryData.indexOf("[");
+            //console.log(loc);
+            val = countryData.substring(0,loc);
+            //console.log(val);
+            val = val.replace(/ /g,"");
+            //console.log(val);
+            val = parseInt(val);
+            //isNaN(45) --> False
+            //isNaN(NaN) --> True
+            
+            if (isNaN(val) === false) {
+                largest = Math.max(largest,val);
+            }
+        }
+        
+        //RENDERING TO SCREEN
+        for (i = 0 ; i < len; i = i + 1) {
+            //ACCESS EACH VALUE FROM JSON
+            countryData = data.fact[i].Value;   
+            loc = countryData.indexOf("[");
+            val = countryData.substring(0,loc);
+            val = val.replace(/ /g,"");  
+            val = parseInt(val);
+            //SCALE IT
+            vals = val/largest*iw;
+
+            //WE ONLY WANT TO RENDER IT TO THE SCREEN IF IT IS VALID
+            if (isNaN(vals) === false) {
+                var div = document.createElement("div"); //CREATES A DIV ELEMENT
+                document.getElementById("content").appendChild(div); //ADD THE DIV TAG TO CONTENT ID
+                div.setAttribute("id","div"+i);  //EACH DIV NEEDS  UNIQUE ID
+                div.style.width = vals+"px"; //Set the width of the div
+                var p = document.createElement("p");   //Create a p element     
+                document.getElementById("div"+i).appendChild(p);  //put the p tag inside the div for the country              
+                p.setAttribute("id","p"+i); //give the p tag an id
+                country = data.fact[i].dims.COUNTRY; //pull out the country name               
+                p.innerHTML = "<pre>"+country+": "+val+"</pre>"; //update the p tag with the country and actual number
+            }
+        }
+      
+    });
+</script>
+</body>
+</html>
