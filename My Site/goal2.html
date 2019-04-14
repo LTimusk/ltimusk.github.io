@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sustainable Cities and Communities</title>
+
+	<style>
+
+
+      body {
+        background-color: lightblue;
+      }
+
+      .slideshow-container img {
+
+          opacity: 1.00;
+          filter: alpha(opacity=50);
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+      }
+
+    
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 50px;
+        width: 50%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       
+      }
+
+ .active, .accordion:hover {
+          background-color: #ccc; 
+        }
+
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+
+      } 
+    /************/
+			.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+    /**********************/
+
+     
+        
+        
+
+	      .titleimage {
+
+	        display: block;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 600px;
+	        height:250px;
+
+
+      }
+			.square{
+
+  			height: 100px;
+  			width: 100px;
+  			background-color: red;
+			}
+
+
+			.center{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%
+			}
+
+			.center2{
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 50%;
+			}
+
+	
+
+			.header {
+					height: 350px;
+					background-color: #D3D3D3;
+					background-position: center;
+					padding: 75px;
+			}
+
+			.center2 {
+
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+     		height: 500px;
+			padding: 70px;
+
+
+			}
+
+			.container {
+
+
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				
+			}
+
+			.textbox {
+
+				font-family: "Loca", Times, serif;
+				font-size: 10px;
+				border-style: groove;
+				
+
+			}
+
+			
+
+			.active {
+			  background-color: #4CAF50;
+			}
+
+			* {box-sizing:border-box}
+
+			/* Slideshow container */
+			.slideshow-container {
+			  width: 100%;
+			  position: relative;
+			  margin: auto;
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+			  display: none;
+			}
+
+			/* Next & previous buttons */
+			.prev, .next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 50%;
+			  width: auto;
+			  margin-top: -22px;
+			  padding: 20px;
+			  color: white;
+			  font-weight: bold;
+			  font-size: 18px;
+			  transition: 0.6s ease;
+			  border-radius: 0 3px 3px 0;
+			  user-select: none;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+			  right: 0;
+			  border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover, .next:hover {
+			  background-color: rgba(0,0,0,0.8);
+			}
+
+			/* Caption text */
+			.text {
+			  color: #f2f2f2;
+			  font-size: 15px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  bottom: 8px;
+			  width: 100%;
+			  text-align: center;
+			}
+
+			.topnav {
+			  overflow: hidden;
+			  background-color: #333;
+			}
+
+			.topnav a {
+			  float: left;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none:
+			  font-size: 17px;
+			}
+
+			.topnav a:hover {
+			  background-color: #ff8c8c;
+			  color: black;
+			}
+
+			.topnav a.active {
+			  background-color: #ff0000:
+			  color: white;
+			}
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 0;
+			}
+
+			/* The dots/bullets/indicators */
+			.dot {
+			  cursor: pointer;
+			  height: 15px;
+			  width: 15px;
+			  margin: 0 2px;
+			  background-color: #bbb;
+			  border-radius: 50%;
+			  display: inline-block;
+			  transition: background-color 0.6s ease;
+			}
+
+			.active, .dot:hover {
+			  background-color: #717171;
+			}
+
+			/* Fading animation */
+			.fade {
+			  -webkit-animation-name: fade;
+			  -webkit-animation-duration: 1.5s;
+			  animation-name: fade;
+			  animation-duration: 1.5s;
+			}
+			.flex-container {
+			    display: flex;
+			    flex-wrap: wrap;
+			    
+			    margin-top: 100px;
+			  }
+
+			.flex-container > div {
+			  background-color: #f1f1f1;
+			  margin: 10px;
+			  padding: 20px;
+			  font-size: 30px;
+			  max-width: 48%;
+			  min-width: 500px;
+			}
+
+			.button {
+			  background-color: #4CAF50;
+			  border: none;
+			  color: white;
+			  padding: 20px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 50px 2px;
+			  cursor: pointer;
+			  display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%
+
+
+			}
+
+			#containerr {
+				margin-left: auto;
+				margin-right: auto;
+				padding: 50px;
+
+				
+
+			}
+
+
+	
+
+			@-webkit-keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
+			}
+
+			@keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
+			}
+
+
+
+
+
+			</style>
+</head>
+<body>
+
+
+	<div class="header">
+		<picture>
+	  <source media="(min-width: 500px)" srcset="images/UNGoal11title.png">
+	  <img class = "titleimage" alt="Flowers" style="width:100; height:50">
+	</picture>
+	</div>
+
+
+		<div>
+
+		<div class="topnav">
+			<a href="goal1.html">UN Goal #1</a>
+			<a class="active" href="goal2.html">UN Goal #2</a>
+		  <a class="active" href="geothermal8.html">Geothermal Energy</a>
+		  
+		  
+		</div>
+	</div>
+
+
+	<div id = "containerr">
+		<iframe class = "center2" width="1440" height="619" src="https://www.youtube.com/embed/-4iGPnF0Wzw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<div class = "container">
+		<div class="flex-container">	
+		  <!-- Slideshow container -->
+		 
+		  <div class = "fb">
+		    <!-- Slideshow container -->
+		    <div class="slideshow-container">
+
+		      <!-- Full-width images with number and caption text -->
+		      <div class="mySlides fade center">
+
+		        <img src="Images/Goal11Image1.jpg" style="height: 200px;">
+		       
+		      </div>
+
+		      <div class="mySlides fade center">
+		        <img src="Images/Goal11Image2.png" style="height: 200px;">
+		      
+		      </div>
+
+		      <div class="mySlides fade center">
+		        <img src="Images/Goal11Image3.jpg" style="height: 200px;">
+		        
+		      </div>
+
+		      <!-- Next and previous buttons -->
+		      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		    </div>
+
+		    <!-- The dots/circles -->
+		    <div style="text-align:center">
+		      <span class="dot" onclick="currentSlide(1)"></span> 
+		      <span class="dot" onclick="currentSlide(2)"></span> 
+		      <span class="dot" onclick="currentSlide(3)"></span> 
+		    </div>
+		    
+		  </div>
+		 
+
+
+		 
+		  <div class = "textbox">
+
+		      The eleventh UN sustainable developement goal is to ensure sustainable cities and communities. This could be energy sources, sustainable growth, and sufficient food and water sources for urban communities. 50% of the worlds population live in urban communities, and those communities need to be able to comfortably host their population, which is why sustainable cities is one of the most important UN goals.
+
+		  </div>  
+		  </div>
+		</div>
+
+
+	<div class = "container">
+
+		<button class="accordion">What does a sustainable city look like?</button>
+		<div class="panel">
+		  <p>Place Holder</p>
+		</div>
+
+		<button class="accordion">How can my city become more sustainable?</button>
+		<div class="panel">
+		  <p>Place Holder</p>
+		</div>
+
+		<button class="accordion">Which cities are the most sustainable?</button>
+		<div class="panel">
+		  <p>Place Holder</p>
+		</div>
+	</div>
+
+	<div class = "container">
+		<div class="flex-container">
+
+			<div class = "textbox">
+
+	      The main problem with sustainable cities comes from the fact that many politicians and mayors are unwilling to convert their city into a more sustainable manner, because of the price or the chance that they may not be re-elected. This is a major problem because if the leaders of cities aren't willing to change them, then the city population won't en either.
+
+	  		</div>
+
+	  		<div class = "textbox">
+
+	      There are many possible solutions to increase sustainability of cities and urban areas. These can include investment in renewable energy sources, investment and increase in public transit, insolation in buildings to keep heat, and investment in education. These are just some of the many ways we can keep our cities inhabitable and sustainable for years to come.
+
+	  		</div>  
+
+	  	</div>
+  </div>
+
+  <div class = "button">	
+
+  	<a onclick="myFunction()">How to get Started</a>
+
+  </div>
+	<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+function myFunction() {
+  window.open("https://www.un.org/sustainabledevelopment/cities/");
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

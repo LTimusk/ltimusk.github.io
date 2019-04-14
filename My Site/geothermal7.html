@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Geothermal Energy in Urban Cities</title>
+
+
+		<style>
+
+
+      body {
+        background-color: lightblue;
+      }
+
+      .slideshow-container img {
+
+          opacity: 1.00;
+          filter: alpha(opacity=50);
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+      }
+
+    
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 50px;
+        width: 50%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       
+      }
+
+ .active, .accordion:hover {
+          background-color: #ccc; 
+        }
+
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+
+      } 
+    /************/
+			.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+    /**********************/
+
+     
+        
+        
+
+	      .titleimage {
+
+	        display: block;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 600px;
+	        height:250px;
+
+
+      }
+			.square{
+
+  			height: 100px;
+  			width: 100px;
+  			background-color: red;
+			}
+
+
+			.center{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%
+			}
+
+			.center2{
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 50%;
+			}
+
+	
+
+			.header {
+					height: 300px;
+					background-color: #D3D3D3;
+					background-position: center;
+					padding: 75px;
+			}
+
+			.center2 {
+
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+     		height: 500px;
+			padding: 70px;
+
+
+			}
+
+			.container {
+
+
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				
+			}
+
+			.textbox {
+
+				font-family: "Arial", Times, serif;
+				font-size: 10px;
+				border-style: groove;
+				
+
+			}
+
+			
+
+			.active {
+			  background-color: #4CAF50;
+			}
+
+			* {box-sizing:border-box}
+
+			/* Slideshow container */
+			.slideshow-container {
+			  width: 100%;
+			  position: relative;
+			  margin: auto;
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+			  display: none;
+			}
+
+			/* Next & previous buttons */
+			.prev, .next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 50%;
+			  width: auto;
+			  margin-top: -22px;
+			  padding: 20px;
+			  color: white;
+			  font-weight: bold;
+			  font-size: 18px;
+			  transition: 0.6s ease;
+			  border-radius: 0 3px 3px 0;
+			  user-select: none;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+			  right: 0;
+			  border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover, .next:hover {
+			  background-color: rgba(0,0,0,0.8);
+			}
+
+			/* Caption text */
+			.text {
+			  color: #f2f2f2;
+			  font-size: 15px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  bottom: 8px;
+			  width: 100%;
+			  text-align: center;
+			}
+
+			.topnav {
+			  overflow: hidden;
+			  background-color: #333;
+			}
+
+			.topnav a {
+			  float: left;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none:
+			  font-size: 17px;
+			}
+
+			.topnav a:hover {
+			  background-color: #ff8c8c;
+			  color: black;
+			}
+
+			.topnav a.active {
+			  background-color: #ff0000:
+			  color: white;
+			}
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 0;
+			}
+
+			/* The dots/bullets/indicators */
+			.dot {
+			  cursor: pointer;
+			  height: 15px;
+			  width: 15px;
+			  margin: 0 2px;
+			  background-color: #bbb;
+			  border-radius: 50%;
+			  display: inline-block;
+			  transition: background-color 0.6s ease;
+			}
+
+			.active, .dot:hover {
+			  background-color: #717171;
+			}
+
+			/* Fading animation */
+			.fade {
+			  -webkit-animation-name: fade;
+			  -webkit-animation-duration: 1.5s;
+			  animation-name: fade;
+			  animation-duration: 1.5s;
+			}
+			.flex-container {
+			    display: flex;
+			    flex-wrap: wrap;
+			    
+			    margin-top: 100px;
+			  }
+
+			.flex-container > div {
+			  background-color: #f1f1f1;
+			  margin: 10px;
+			  padding: 20px;
+			  font-size: 30px;
+			  max-width: 48%;
+			  min-width: 500px;
+			}
+
+			.button {
+			  background-color: #4CAF50;
+			  border: none;
+			  color: white;
+			  padding: 20px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 50px 2px;
+			  cursor: pointer;
+			  display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%
+
+
+			}
+
+			#containerr {
+				margin-left: auto;
+				margin-right: auto;
+				
+
+			}
+
+
+	
+
+			@-webkit-keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
+			}
+
+			@keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
+			}
+
+
+
+
+
+			</style>
+
+			</head>
+
+
+<body>
+
+
+
+<div class="header">
+	<picture>
+  <source media="(min-width: 500px)" srcset="images/geothermaltitle.png">
+  <img class = "titleimage" alt="Flowers" style="width:150; height:20">
+</picture>
+</div>
+
+<div>
+
+<div class="topnav">
+  <a class="active" href="geothermal6.html">First Goal</a>
+  <a href="secondPage.html">Second Goal</a>
+</div>
+
+
+</div>
+
+<div id = "containerr">
+	<iframe class = "center2" width="1100" height="500" src="https://www.youtube.com/embed/uVDBRQvBVso" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class = "container">
+	<div class="flex-container">	
+	  <!-- Slideshow container -->
+	 
+	  <div class = "fb">
+	    <!-- Slideshow container -->
+	    <div class="slideshow-container">
+
+	      <!-- Full-width images with number and caption text -->
+	      <div class="mySlides fade center">
+
+	        <img src="Images/GeothermalImage1.jpg" style="height: 200px; width: 500px:">
+	       
+	      </div>
+
+	      <div class="mySlides fade center">
+	        <img src="Images/GeothermalImage2.png" style="height: 200px;">
+	      
+	      </div>
+
+	      <div class="mySlides fade center">
+	        <img src="Images/GeothermalImage3.jpg" style="height: 200px;">
+	        
+	      </div>
+
+	      <!-- Next and previous buttons -->
+	      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	    </div>
+
+	    <!-- The dots/circles -->
+	    <div style="text-align:center">
+	      <span class="dot" onclick="currentSlide(1)"></span> 
+	      <span class="dot" onclick="currentSlide(2)"></span> 
+	      <span class="dot" onclick="currentSlide(3)"></span> 
+	    </div>
+	    
+	  </div>
+	 
+
+
+	 
+	  <div class = "textbox">
+
+	      INTRO TEXT: ASDFGHJKL HGFDSASDF GHJKLK JHGFD SASDFGHJ KLKJHGFDSA SDFGHJKFD SASDFGHJK LKJHGFD SASDFGHJ KL:LJHGSAS DFGHJKLKJF DSASDFGHJKL :GFDSD FGHJKLKJHGF DSDF GHJKJH GFDFG HJKL:LKJ HGFDS DFG HJK
+
+	  </div>  
+	  </div>
+	</div> <!--END CONTENT-->
+
+	<div class = "container">
+
+		<button class="accordion">Section 1</button>
+		<div class="panel">
+		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+
+		<button class="accordion">Section 2</button>
+		<div class="panel">
+		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+
+		<button class="accordion">Section 3</button>
+		<div class="panel">
+		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</div>
+
+	<div class = "container">
+		<div class="flex-container">
+
+			<div class = "textbox">
+
+	      INTRO TEXT: ASDFGHJKL HGFDSASDF GHJKLK JHGFD SASDFGHJ KLKJHGFDSA SDFGHJKFD SASDFGHJK LKJHGFD SASDFGHJ KL:LJHGSAS DFGHJKLKJF DSASDFGHJKL :GFDSD FGHJKLKJHGF DSDF GHJKJH GFDFG HJKL:LKJ HGFDS DFG HJK
+
+	  		</div>
+
+	  		<div class = "textbox">
+
+	      INTRO TEXT: ASDFGHJKL HGFDSASDF GHJKLK JHGFD SASDFGHJ KLKJHGFDSA SDFGHJKFD SASDFGHJK LKJHGFD SASDFGHJ KL:LJHGSAS DFGHJKLKJF DSASDFGHJKL :GFDSD FGHJKLKJHGF DSDF GHJKJH GFDFG HJKL:LKJ HGFDS DFG HJK
+
+	  		</div>  
+
+	  	</div>
+  </div>
+
+  
+
+
+ 
+	 
+ 
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+
+</script>
+
+
+</body>
+
+
+
+</html>
